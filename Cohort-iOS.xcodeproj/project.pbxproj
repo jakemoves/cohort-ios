@@ -10,6 +10,8 @@
 		8864D8E5215FC4AA00D833AB /* Cohort_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864D8DB215FC4AA00D833AB /* Cohort_iOS.framework */; };
 		8864D8EA215FC4AA00D833AB /* Cohort_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8864D8E9215FC4AA00D833AB /* Cohort_iOSTests.swift */; };
 		8864D8EC215FC4AA00D833AB /* Cohort_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8864D8DE215FC4AA00D833AB /* Cohort_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8864D8F7215FC54D00D833AB /* CHSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8864D8F6215FC54D00D833AB /* CHSession.swift */; };
+		8864D8F9215FC59B00D833AB /* CHSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8864D8F8215FC59B00D833AB /* CHSessionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		8864D8E4215FC4AA00D833AB /* Cohort-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cohort-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8864D8E9215FC4AA00D833AB /* Cohort_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cohort_iOSTests.swift; sourceTree = "<group>"; };
 		8864D8EB215FC4AA00D833AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8864D8F6215FC54D00D833AB /* CHSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHSession.swift; sourceTree = "<group>"; };
+		8864D8F8215FC59B00D833AB /* CHSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHSessionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +57,8 @@
 		8864D8D1215FC4AA00D833AB = {
 			isa = PBXGroup;
 			children = (
-				8864D8DD215FC4AA00D833AB /* Cohort-iOS */,
-				8864D8E8215FC4AA00D833AB /* Cohort-iOSTests */,
+				8864D8DD215FC4AA00D833AB /* Sources */,
+				8864D8E8215FC4AA00D833AB /* Tests */,
 				8864D8DC215FC4AA00D833AB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,22 +72,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8864D8DD215FC4AA00D833AB /* Cohort-iOS */ = {
+		8864D8DD215FC4AA00D833AB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8864D8F5215FC53000D833AB /* Cohort-iOS */,
 				8864D8DE215FC4AA00D833AB /* Cohort_iOS.h */,
 				8864D8DF215FC4AA00D833AB /* Info.plist */,
 			);
-			path = "Cohort-iOS";
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		8864D8E8215FC4AA00D833AB /* Cohort-iOSTests */ = {
+		8864D8E8215FC4AA00D833AB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				8864D8E9215FC4AA00D833AB /* Cohort_iOSTests.swift */,
 				8864D8EB215FC4AA00D833AB /* Info.plist */,
+				8864D8F8215FC59B00D833AB /* CHSessionTests.swift */,
 			);
-			path = "Cohort-iOSTests";
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		8864D8F5215FC53000D833AB /* Cohort-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8864D8F6215FC54D00D833AB /* CHSession.swift */,
+			);
+			path = "Cohort-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +162,7 @@
 				TargetAttributes = {
 					8864D8DA215FC4AA00D833AB = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					8864D8E3215FC4AA00D833AB = {
 						CreatedOnToolsVersion = 10.0;
@@ -194,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8864D8F7215FC54D00D833AB /* CHSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8864D8EA215FC4AA00D833AB /* Cohort_iOSTests.swift in Sources */,
+				8864D8F9215FC59B00D833AB /* CHSessionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +358,7 @@
 		8864D8F0215FC4AA00D833AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -348,7 +366,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Cohort-iOS/Info.plist";
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -358,6 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "rocks.cohort.Cohort-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +385,7 @@
 		8864D8F1215FC4AA00D833AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -373,7 +393,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Cohort-iOS/Info.plist";
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -391,9 +411,10 @@
 		8864D8F3215FC4AA00D833AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J93D25NHHG;
-				INFOPLIST_FILE = "Cohort-iOSTests/Info.plist";
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -409,9 +430,10 @@
 		8864D8F4215FC4AA00D833AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J93D25NHHG;
-				INFOPLIST_FILE = "Cohort-iOSTests/Info.plist";
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
