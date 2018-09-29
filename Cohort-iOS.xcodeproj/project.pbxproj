@@ -12,6 +12,9 @@
 		8864D8EC215FC4AA00D833AB /* Cohort_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8864D8DE215FC4AA00D833AB /* Cohort_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8864D8F7215FC54D00D833AB /* CHSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8864D8F6215FC54D00D833AB /* CHSession.swift */; };
 		8864D8F9215FC59B00D833AB /* CHSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8864D8F8215FC59B00D833AB /* CHSessionTests.swift */; };
+		8864D8FC215FC7C800D833AB /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864D8FB215FC7C800D833AB /* Starscream.framework */; };
+		88C117D6215FCDA5009B3220 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864D8FB215FC7C800D833AB /* Starscream.framework */; };
+		88C117D7215FCDA9009B3220 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8864D8FB215FC7C800D833AB /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +27,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8864D8FF215FCCFC00D833AB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				88C117D7215FCDA9009B3220 /* Starscream.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8864D8DB215FC4AA00D833AB /* Cohort_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cohort_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8864D8DE215FC4AA00D833AB /* Cohort_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cohort_iOS.h; sourceTree = "<group>"; };
@@ -33,6 +49,7 @@
 		8864D8EB215FC4AA00D833AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8864D8F6215FC54D00D833AB /* CHSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHSession.swift; sourceTree = "<group>"; };
 		8864D8F8215FC59B00D833AB /* CHSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHSessionTests.swift; sourceTree = "<group>"; };
+		8864D8FB215FC7C800D833AB /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8864D8FC215FC7C800D833AB /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8864D8E5215FC4AA00D833AB /* Cohort_iOS.framework in Frameworks */,
+				88C117D6215FCDA5009B3220 /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +79,7 @@
 				8864D8DD215FC4AA00D833AB /* Sources */,
 				8864D8E8215FC4AA00D833AB /* Tests */,
 				8864D8DC215FC4AA00D833AB /* Products */,
+				8864D8FA215FC7C800D833AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +120,14 @@
 			path = "Cohort-iOS";
 			sourceTree = "<group>";
 		};
+		8864D8FA215FC7C800D833AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8864D8FB215FC7C800D833AB /* Starscream.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -136,6 +164,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8864D8F2215FC4AA00D833AB /* Build configuration list for PBXNativeTarget "Cohort-iOSTests" */;
 			buildPhases = (
+				8864D8FF215FCCFC00D833AB /* CopyFiles */,
 				8864D8E0215FC4AA00D833AB /* Sources */,
 				8864D8E1215FC4AA00D833AB /* Frameworks */,
 				8864D8E2215FC4AA00D833AB /* Resources */,
@@ -285,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -343,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -366,8 +395,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,8 +427,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,6 +453,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J93D25NHHG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -433,6 +476,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J93D25NHHG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -19,9 +19,24 @@ class CHSessionTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        let session = CHSession.init()
+    func testItConnects() {
+        let urlString = "http://jakemoves.local:8080"
+        let session = CHSession.init(cohortServerURL: URL(string: urlString)!)
         XCTAssertNotNil(session)
+        XCTAssert(session.socketURL == URL(string: urlString)!)
+        
+        let exp = self.expectation(description: "Connected")
+        
+        session.connect { (result) in
+            if(result){
+                exp.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: 5.0, handler: nil)
+        
+        XCTAssertTrue(session.isConnected)
+        
     }
 
     func testPerformanceExample() {
