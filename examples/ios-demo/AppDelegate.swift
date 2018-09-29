@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        cohortSession = CHSession(cohortServerURL: URL(string: "http://jakemoves.local:8080")!)
+        cohortSession = CHSession(cohortServerURL: URL(string: "http://jakemoves.local")!)
         cohortSession?.connect(completion: { (result) in
             if !result {
                 debugPrint("failed to connect to cohort server")
@@ -55,6 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.cohortSession?.registerForNotifications(token: deviceToken, completion: { (result) in
             if !result {
                 debugPrint("Error registering for notifications")
+            } else {
+                debugPrint("registration result: \(result)")
             }
         })
     }

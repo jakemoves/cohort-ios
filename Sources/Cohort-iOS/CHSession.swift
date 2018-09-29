@@ -12,25 +12,31 @@ import Alamofire
 
 public class CHSession: NSObject{
     private let serverURL: URL
+    private var socketURL: URL
+    private var httpURL: URL
     
     private var socket: WebSocket
+    
     
     public var isConnected: Bool {
         get { return socket.isConnected }
     }
     
-    private var httpURL: URL {
-        get { return serverURL.appendingPathComponent(":3000")}
-    }
-    
-    private var socketURL: URL {
-        get { return serverURL.appendingPathComponent(":8080")}
-    }
-    
     public init(cohortServerURL url: URL){
         serverURL = url
         
-        socket = WebSocket(url: serverURL.appendingPathComponent(":8080"))
+        var baseURL = URLComponents()
+        baseURL.scheme = serverURL.scheme
+        baseURL.host = serverURL.host
+        
+        // socket server
+        baseURL.port = 8080
+        socketURL = baseURL.url!
+        socket = WebSocket(url: socketURL)
+        
+        // http server
+        baseURL.port = 3000
+        httpURL = baseURL.url!
         
         super.init()
         
@@ -46,8 +52,10 @@ public class CHSession: NSObject{
     public func registerForNotifications(token: Data, completion: (_ result: Bool) -> ()){
         let tokenString = token.hexString()
         debugPrint(tokenString)
+        let serverString = httpURL.absoluteString + "/register-for-notifications"
+        debugPrint(serverString)
         let params: Parameters = [ "token": tokenString ]
-        Alamofire.request(serverURL.absoluteString + "/register-for-notifications", method: .post, parameters: params, encoding: JSONEncoding.default).validate()
+        Alamofire.request(serverString, method: .post, parameters: params, encoding: JSONEncoding.default).validate()
     }
 }
 
