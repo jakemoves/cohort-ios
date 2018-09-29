@@ -12,18 +12,19 @@
 		8864D8EC215FC4AA00D833AB /* Cohort_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8864D8DE215FC4AA00D833AB /* Cohort_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8864D8F7215FC54D00D833AB /* CHSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8864D8F6215FC54D00D833AB /* CHSession.swift */; };
 		8864D8F9215FC59B00D833AB /* CHSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8864D8F8215FC59B00D833AB /* CHSessionTests.swift */; };
-		8864D8FC215FC7C800D833AB /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864D8FB215FC7C800D833AB /* Starscream.framework */; };
 		88972C14215FE9B9009E893E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88972C13215FE9B9009E893E /* AppDelegate.swift */; };
 		88972C16215FE9B9009E893E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88972C15215FE9B9009E893E /* ViewController.swift */; };
 		88972C19215FE9B9009E893E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88972C17215FE9B9009E893E /* Main.storyboard */; };
 		88972C1B215FE9B9009E893E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88972C1A215FE9B9009E893E /* Assets.xcassets */; };
 		88972C1E215FE9B9009E893E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88972C1C215FE9B9009E893E /* LaunchScreen.storyboard */; };
-		88972C25215FEBA7009E893E /* Cohort_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864D8DB215FC4AA00D833AB /* Cohort_iOS.framework */; };
-		88972C26215FEBA7009E893E /* Cohort_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8864D8DB215FC4AA00D833AB /* Cohort_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		88972C2A215FEBC4009E893E /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864D8FB215FC7C800D833AB /* Starscream.framework */; };
-		88972C2B215FEBC4009E893E /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8864D8FB215FC7C800D833AB /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		88C117D6215FCDA5009B3220 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864D8FB215FC7C800D833AB /* Starscream.framework */; };
-		88C117D7215FCDA9009B3220 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8864D8FB215FC7C800D833AB /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		88E469E82160011700004D73 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E469E62160010400004D73 /* Starscream.framework */; };
+		88E469EB2160025A00004D73 /* Cohort_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864D8DB215FC4AA00D833AB /* Cohort_iOS.framework */; };
+		88E469EC2160025A00004D73 /* Cohort_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8864D8DB215FC4AA00D833AB /* Cohort_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		88E469F02160029A00004D73 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E469E62160010400004D73 /* Starscream.framework */; };
+		88E469F12160029A00004D73 /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88E469E62160010400004D73 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		88E469F3216002CD00004D73 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E469F2216002CD00004D73 /* Alamofire.framework */; };
+		88E469F4216002DC00004D73 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E469F2216002CD00004D73 /* Alamofire.framework */; };
+		88E469F5216002DC00004D73 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88E469F2216002CD00004D73 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +35,7 @@
 			remoteGlobalIDString = 8864D8DA215FC4AA00D833AB;
 			remoteInfo = "Cohort-iOS";
 		};
-		88972C27215FEBA7009E893E /* PBXContainerItemProxy */ = {
+		88E469ED2160025A00004D73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8864D8D2215FC4AA00D833AB /* Project object */;
 			proxyType = 1;
@@ -50,27 +51,18 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				88C117D7215FCDA9009B3220 /* Starscream.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		88972BD8215FE8B2009E893E /* CopyFiles */ = {
+		88E469EF2160025A00004D73 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		88972C29215FEBA7009E893E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				88972C26215FEBA7009E893E /* Cohort_iOS.framework in Embed Frameworks */,
-				88972C2B215FEBC4009E893E /* Starscream.framework in Embed Frameworks */,
+				88E469EC2160025A00004D73 /* Cohort_iOS.framework in Embed Frameworks */,
+				88E469F5216002DC00004D73 /* Alamofire.framework in Embed Frameworks */,
+				88E469F12160029A00004D73 /* Starscream.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,7 +78,6 @@
 		8864D8EB215FC4AA00D833AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8864D8F6215FC54D00D833AB /* CHSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHSession.swift; sourceTree = "<group>"; };
 		8864D8F8215FC59B00D833AB /* CHSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHSessionTests.swift; sourceTree = "<group>"; };
-		8864D8FB215FC7C800D833AB /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		88972C11215FE9B9009E893E /* ios-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88972C13215FE9B9009E893E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88972C15215FE9B9009E893E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +85,9 @@
 		88972C1A215FE9B9009E893E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88972C1D215FE9B9009E893E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88972C1F215FE9B9009E893E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88972C2C215FEC80009E893E /* ios-demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ios-demo.entitlements"; sourceTree = "<group>"; };
+		88E469E62160010400004D73 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
+		88E469F2216002CD00004D73 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8864D8FC215FC7C800D833AB /* Starscream.framework in Frameworks */,
+				88E469E82160011700004D73 /* Starscream.framework in Frameworks */,
+				88E469F3216002CD00004D73 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +105,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8864D8E5215FC4AA00D833AB /* Cohort_iOS.framework in Frameworks */,
-				88C117D6215FCDA5009B3220 /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,8 +112,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88972C25215FEBA7009E893E /* Cohort_iOS.framework in Frameworks */,
-				88972C2A215FEBC4009E893E /* Starscream.framework in Frameworks */,
+				88E469EB2160025A00004D73 /* Cohort_iOS.framework in Frameworks */,
+				88E469F4216002DC00004D73 /* Alamofire.framework in Frameworks */,
+				88E469F02160029A00004D73 /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +173,8 @@
 		8864D8FA215FC7C800D833AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8864D8FB215FC7C800D833AB /* Starscream.framework */,
+				88E469F2216002CD00004D73 /* Alamofire.framework */,
+				88E469E62160010400004D73 /* Starscream.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,6 +190,7 @@
 		88972C12215FE9B9009E893E /* ios-demo */ = {
 			isa = PBXGroup;
 			children = (
+				88972C2C215FEC80009E893E /* ios-demo.entitlements */,
 				88972C13215FE9B9009E893E /* AppDelegate.swift */,
 				88972C15215FE9B9009E893E /* ViewController.swift */,
 				88972C17215FE9B9009E893E /* Main.storyboard */,
@@ -222,7 +219,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8864D8EF215FC4AA00D833AB /* Build configuration list for PBXNativeTarget "Cohort-iOS" */;
 			buildPhases = (
-				88972BD8215FE8B2009E893E /* CopyFiles */,
 				8864D8D6215FC4AA00D833AB /* Headers */,
 				8864D8D7215FC4AA00D833AB /* Sources */,
 				8864D8D8215FC4AA00D833AB /* Frameworks */,
@@ -263,12 +259,12 @@
 				88972C0D215FE9B9009E893E /* Sources */,
 				88972C0E215FE9B9009E893E /* Frameworks */,
 				88972C0F215FE9B9009E893E /* Resources */,
-				88972C29215FEBA7009E893E /* Embed Frameworks */,
+				88E469EF2160025A00004D73 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				88972C28215FEBA7009E893E /* PBXTargetDependency */,
+				88E469EE2160025A00004D73 /* PBXTargetDependency */,
 			);
 			name = "ios-demo";
 			productName = "ios-demo";
@@ -294,6 +290,11 @@
 					};
 					88972C10215FE9B9009E893E = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -379,10 +380,10 @@
 			target = 8864D8DA215FC4AA00D833AB /* Cohort-iOS */;
 			targetProxy = 8864D8E6215FC4AA00D833AB /* PBXContainerItemProxy */;
 		};
-		88972C28215FEBA7009E893E /* PBXTargetDependency */ = {
+		88E469EE2160025A00004D73 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8864D8DA215FC4AA00D833AB /* Cohort-iOS */;
-			targetProxy = 88972C27215FEBA7009E893E /* PBXContainerItemProxy */;
+			targetProxy = 88E469ED2160025A00004D73 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -642,6 +643,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "examples/ios-demo/ios-demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J93D25NHHG;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -666,6 +668,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "examples/ios-demo/ios-demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J93D25NHHG;
 				FRAMEWORK_SEARCH_PATHS = (
