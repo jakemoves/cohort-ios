@@ -9,15 +9,15 @@
 import UIKit
 import Starscream
 
-class CHSession: NSObject{
-    let socketURL: URL
-    var socket: WebSocket
+public class CHSession: NSObject{
+    private let socketURL: URL
+    private var socket: WebSocket
     
-    var isConnected: Bool {
+    public var isConnected: Bool {
         get { return socket.isConnected }
     }
     
-    init(cohortServerURL url: URL){
+    public init(cohortServerURL url: URL){
         socketURL = url
         socket = WebSocket(url: self.socketURL)
         
@@ -26,7 +26,7 @@ class CHSession: NSObject{
         socket.delegate = self
     }
     
-    func connect(completion: (_ result: Bool) -> ()){
+    public func connect(completion: (_ result: Bool) -> ()){
         socket.connect()
         while (!isConnected) {}
         return completion(true)
@@ -34,19 +34,19 @@ class CHSession: NSObject{
 }
 
 extension CHSession: WebSocketDelegate {
-    func websocketDidConnect(socket: WebSocketClient) {
+    public func websocketDidConnect(socket: WebSocketClient) {
         
     }
     
-    func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+    public func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
         
     }
     
-    func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+    public func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
         
     }
     
-    func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+    public func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
         
     }
 }
